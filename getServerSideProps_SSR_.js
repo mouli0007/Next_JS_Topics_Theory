@@ -1,4 +1,4 @@
-##################################################
+#################################################
 
 ######################### SERVER SIDE Rendering (SSR)###############################
 
@@ -19,3 +19,32 @@ Used For
 	this function will be executed whenever the request is made for the component page
 	
  3=> we should not use getStaticProps() and getServerSideProps() at the same time	
+ 
+ Syntaxx
+ 
+
+4=> No Pre-generation will happen in getServerSideProps() coz it runs on every server request time
+
+############ Syntax ##############
+
+export const getServerSideProps = async (context) => {
+
+  // Unlike params we also get access to request and response object 
+  
+  const { params,req,res } = context;
+
+  // We can get access to the full request object
+
+  return {
+    props: {
+      userName: "Max",
+    },
+  };
+};
+
+###### Behind the Scenes working with getServerSideProps() ########### 
+
+
+Main use Case => We prepare the data to the componenet a ahead of time on the server for the component
+                and serve a finished page to the client which offers a better USER EXPERIENCE
+				it alo helps in SEO
