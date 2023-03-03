@@ -23,6 +23,7 @@
                
 			   This keyword is used when you want to dynamically 
 			   pre render a lots of pages with different id
+			   it will directly re-direct to page not found if there is no data
 			   
 			   
 
@@ -30,6 +31,11 @@
 		              
 			   To return a pre-generated page with high priority
 			   and to pre render only some pages instaead of pre rendering N[number] of pages
+			   it will throw an error if there is no data, but we can configure with below syntax
+			   
+			    if (!product) {
+                      return { notFound: true };
+                             }
          
 		 // Fallback : 'blocking'
 		          
