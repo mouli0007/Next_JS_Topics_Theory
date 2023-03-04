@@ -6,6 +6,10 @@
 
 3 Page Pre-rendering => 
 
+4=> Pre-Fecthing and Pre-rendering makes NEXT JS more powerful
+
+
+
 react => the html file loads initially and then javascript code runs 
 
           it could take a while if any kind of data is loaded from the server
