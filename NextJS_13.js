@@ -12,3 +12,23 @@ Next js 13 Inshights !
 6=> For dynamic pages we have to create a dynamic folder with a square bracket and we have to add a page.js file 
     so that file will act as a dynamic page
  
+ ### New Function => generateStaticParams ###
+ 
+ Ability to cache and pre ggenerate the pages which is not SSG
+ 
+ 
+ ##### Syntax #####
+ 
+ #### Same Like getStaticProps ### pre renders every pages 
+ ### helps in avoiding fallback
+ 
+ export async function generateStaticParams() {
+  const response = await fetch("URL");
+  const todo = await response.json();
+
+    
+    
+  return todo.map((todo) => ({
+    todoId: todo.id.toString(),
+  }));
+}
