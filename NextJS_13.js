@@ -1,4 +1,6 @@
-Next js 13 Inshights !
+
+
+######  Next js 13 Inshights ! #############
 
 ### App Directory ### All components are server somponents not client components
 
@@ -11,16 +13,20 @@ Next js 13 Inshights !
 
 6=> For dynamic pages we have to create a dynamic folder with a square bracket and we have to add a page.js file 
     so that file will act as a dynamic page
+	
+	### import {notFound} from 'next/navigation'
+ 7=> notFound()=> function re directs to 404 page 
  
  ### New Function => generateStaticParams ###
  
- Ability to cache and pre ggenerate the pages which is not SSG
+ #### Ability to cache and pre generate the pages which is not SSG or pre-generated
  
  
  ##### Syntax #####
  
- #### Same Like getStaticProps ### pre renders every pages 
+ #### Same Like getStaticPaths() ### pre renders every pages 
  ### helps in avoiding fallback
+ ## We dont need to use getStaticProps() for re validation we can use simple client side async fectch function
  
  export async function generateStaticParams() {
   const response = await fetch("URL");
@@ -32,3 +38,25 @@ Next js 13 Inshights !
     todoId: todo.id.toString(),
   }));
 }
+
+##### Client Component #############
+
+
+By Default All Next Js components are server side if you want to make them as a client component you have to 
+
+##### "use client " #####
+
+#### Next JS 13 In-Built components #####
+
+### Loading 
+### Error 
+### Layout
+### Head (We can add it to a specific folder and it act accordingly)
+
+### We just need to create a file with the above extension and whereever we want in our project 
+     and we can use whatever boilerplate code we want
+	 
+	 
+	 ####  Next Js Suspense for optimization ####
+	 
+	 ### By Default it prevents Re Render for unwanted components !
