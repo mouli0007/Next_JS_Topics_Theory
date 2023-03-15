@@ -80,3 +80,12 @@ module.exports = (phase) => {
     },
   };
 };
+
+
+3=> ######### Doing a test Build ###########
+
+
+1=> it gives you the status which pagesare pre-generated 
+ which file has big memmory or size and which is not optimal
+
+2=> we can make some code optimizing changes to make the bundle size small (Ex : React Third party package)
