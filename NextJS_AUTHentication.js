@@ -28,3 +28,14 @@
 				  
 			1=> Servers dont save information about clinet authenticated clients
 			2=> Instead, clients should get information that allows them to prove their authentication
+			
+			#### JWT Wotking Example ###
+			
+			JWT is generated with three main building blocks
+			
+			1=> Issuer Data
+			2=> Custom Data (Example: User Data)
+			3=> Secrect Siginig Key (Client dosent get to know about this key )
+			
+			
+			
