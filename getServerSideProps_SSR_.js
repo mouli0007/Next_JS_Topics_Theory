@@ -42,7 +42,7 @@ export const getServerSideProps = async (context) => {
   };
 };
 
-###### Behind the Scenes working with getServerSideProps() ########### 
+###### Behind the Scenes working with getServerSideProps()  ########### 
 
 
 Main use Case => We prepare the data to the componenet a ahead of time on the server for the component
